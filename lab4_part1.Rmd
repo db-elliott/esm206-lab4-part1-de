@@ -1,5 +1,5 @@
 ---
-title: "Lab 4 Part 1"
+title: "Interactive Penguins"
 author: "Deanna Elliott"
 date: "10/19/2021"
 output: html_document
@@ -8,9 +8,31 @@ output: html_document
 ```{r setup, include=FALSE, message = FALSE, warning = FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = TRUE)
 
+#install and attach necessary packages
+
 library(tidyverse)
 library(DT)
 library(plotly)
+library(palmerpenguins)
+```
+
+Plots
+- Scatterplot of penguin flipper length (x) vs body mass (y), with points having different colors based on species
+- Make it interactive with plotly
+
+```{r plotly}
+
+penguins_graph <- ggplot(data = penguins,
+       aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_jitter(aes(color = species))
+
+ggplotly(penguins_graph)
+```
+
+Create an interactive table of the penguins data using {DT}
+
+```{r DT penguins}
+
 ```
 
 
