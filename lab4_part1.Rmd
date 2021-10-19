@@ -1,0 +1,16 @@
+---
+title: "Lab 4 Part 1"
+author: "Deanna Elliott"
+date: "10/19/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE, message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = TRUE)
+
+library(tidyverse)
+library(DT)
+library(plotly)
+```
+
+
