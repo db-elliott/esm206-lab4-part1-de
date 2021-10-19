@@ -14,6 +14,7 @@ library(tidyverse)
 library(DT)
 library(plotly)
 library(palmerpenguins)
+library(here)
 ```
 
 ## Plots ##
@@ -35,4 +36,14 @@ Create an interactive table of the penguins data using {DT}
 datatable(penguins)
 ```
 
+Create a column graph (using geom_bar) of counts of penguins by island, with fill color indicating species. Then save with ggsave.
+
+```{r}
+
+ggplot(data = penguins,
+       aes(x = island)) +
+  geom_bar(aes(fill = species))
+
+ggsave(here("final_figures", "island_counts.png"))
+```
 
