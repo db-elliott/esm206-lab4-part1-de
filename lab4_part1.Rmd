@@ -16,9 +16,8 @@ library(plotly)
 library(palmerpenguins)
 ```
 
-Plots
-- Scatterplot of penguin flipper length (x) vs body mass (y), with points having different colors based on species
-- Make it interactive with plotly
+## Plots ##
+Create interactive scatterplot of penguin flipper length (x) vs body mass (y), with points having different colors based on species
 
 ```{r plotly}
 
@@ -31,8 +30,9 @@ ggplotly(penguins_graph)
 
 Create an interactive table of the penguins data using {DT}
 
-```{r DT penguins}
+```{r DT}
 
+datatable(penguins)
 ```
 
 
